@@ -40,13 +40,13 @@ export function AuthProvider({ children }) {
   //login function
 
   function login(email, password) {
-    const auth = getAuth;
+    const auth = getAuth();
     return signInWithEmailAndPassword(auth, email, password);
   }
   //logout
 
   function logout() {
-    const auth = getAuth;
+    const auth = getAuth();
     return signOut(auth);
   }
   const value = {
